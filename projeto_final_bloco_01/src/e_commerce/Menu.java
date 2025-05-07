@@ -1,7 +1,12 @@
 package e_commerce;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
+
+import model.Calca;
+import model.Camiseta;
+import model.Produto;
 
 public class Menu {
 
@@ -10,7 +15,22 @@ public class Menu {
 		Scanner leia = new Scanner(System.in);
 
 		int opcao;
+		    	
+        // Teste direto
 
+        // Criação das camisetas
+        Camiseta camiseta1 = new Camiseta("Camiseta Oversized", "Camiseta", 101, 89.90f, 10, "M", "Arte Abstrata");
+
+        // Criação das calças
+        Calca calca1 = new Calca("Calça Jeans Skinny", "Calça", 201, 149.90f, 8, "38", "Jeans");
+
+
+        // Adicionando os produtos na lista
+        camiseta1.visualizar();
+        calca1.visualizar();
+
+
+        
 		while (true) {
 
 			System.out.println("*****************************************************");
@@ -19,9 +39,10 @@ public class Menu {
 			System.out.println("                                                     ");
 			System.out.println("            1 - Criar Produto                        ");
 			System.out.println("            2 - Listar todas as Produtos             ");
-			System.out.println("            3 - Buscar Produto por Numero            ");
-			System.out.println("            4 - Atualizar Dados da Produto           ");
-			System.out.println("            5 - Apagar Produto                       ");
+			System.out.println("            3 - Venda de um produto                  ");
+			System.out.println("            4 - Buscar Produto por Numero            ");
+			System.out.println("            5 - Atualizar Dados da Produto           ");
+			System.out.println("            6 - Apagar Produto                       ");
 			System.out.println("            0 - Sair                                 ");
 			System.out.println("                                                     ");
 			System.out.println("*****************************************************");
@@ -50,17 +71,22 @@ public class Menu {
 					keyPress();
 					break;
 				case 3:
-					System.out.println("Consultar Produto por número\n");
+					System.out.println("Venda de Produto\n");
 
 					keyPress();
 					break;
 				case 4:
-					System.out.println("Atualizar dados da Produto\n");
+					System.out.println("Buscar Produto por Numero\n");
 					
 					keyPress();
 					break;
 				case 5:
-					System.out.println("Apagar a Produto\n");
+					System.out.println("Atualizar Dados da Produto\n");
+					
+					keyPress();
+					break;
+				case 6:
+					System.out.println("Apagar Produto\n");
 					
 					keyPress();
 					break;
