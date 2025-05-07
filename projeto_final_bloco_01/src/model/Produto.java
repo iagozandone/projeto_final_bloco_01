@@ -6,7 +6,7 @@ public abstract class Produto {
 	
     //Atributos da Classe Produto
 	private String nome;
-	private String tipo; 
+	private String genero; 
 	private int codigo;
 	private float preco;
 	private int quantidade;
@@ -14,9 +14,9 @@ public abstract class Produto {
 	
 	
     //Metodo construtor
-	public Produto(String nome, String tipo, int codigo, float preco, int quantidade, String tamanho) {
+	public Produto(String nome, String genero, int codigo, float preco, int quantidade, String tamanho) {
 		this.nome = nome;
-		this.tipo = tipo;
+		this.genero = genero;
 		this.codigo = codigo;
 		this.preco = preco;
 		this.quantidade = quantidade;
@@ -36,14 +36,14 @@ public abstract class Produto {
 
 
 
-	public String getTipo() {
-		return tipo;
+	public String getGenero() {
+		return genero;
 	}
 
 
 
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
+	public void setGenero(String genero) {
+		this.genero = genero;
 	}
 
 
@@ -103,7 +103,7 @@ public abstract class Produto {
 	   NumberFormat nfMoeda = NumberFormat.getCurrencyInstance();
 		
 	   System.out.println("\nNome: " + this.nome);
-	   System.out.println("Tipo: " + this.tipo);
+	   System.out.println("genero: " + this.genero);
 	   System.out.println("Codigo: " + this.codigo);
 	   System.out.println("Tamanho: " + this.tamanho);
 	   System.out.println("Quantidade: " + this.quantidade);
